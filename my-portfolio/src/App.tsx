@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 const sections = [
   { id: 'services', title: 'Services' },
@@ -42,6 +43,7 @@ export default function App() {
           </section>
         ))}
       </main>
+      <Footer />
     </>
   )
 }
