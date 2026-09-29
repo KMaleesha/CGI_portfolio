@@ -1,8 +1,10 @@
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Process from './components/Process'
 
 const sections = [
   { id: 'services', title: 'Services' },
+  { id: 'process', title: 'How we work' },
   { id: 'work', title: 'Work' },
   { id: 'about', title: 'About Us' },
   { id: 'blogs', title: 'Blogs' },
@@ -31,15 +33,23 @@ export default function App() {
           </div>
         </section>
 
-        {sections.map((s) => (
+        {/* OTHER SECTIONS */}
+        {sections.map((section) => (
           <section
-            key={s.id}
-            id={s.id}
-            className="flex min-h-screen scroll-mt-20 items-center px-6"
+            key={section.id}
+            id={section.id}
+            className="min-h-screen scroll-mt-8 px-6 py-4"
           >
-            <h2 className="mx-auto w-full max-w-6xl text-4xl font-bold text-ink">
-              {s.title}
-            </h2>
+            <div className="mx-auto max-w-6xl">
+              <h2 className="text-4xl font-bold text-ink">
+                  {section.title}
+                </h2>
+              {section.id === 'process' ? (
+                <Process />
+              ) : (
+                <p></p>
+              )}
+            </div>
           </section>
         ))}
       </main>
