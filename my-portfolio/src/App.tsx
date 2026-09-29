@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Process from './components/Process'
+import Services from './components/services'
 
 const sections = [
   { id: 'services', title: 'Services' },
@@ -21,8 +22,7 @@ export default function App() {
           id="home"
           className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20"
         >
-          {/* soft orange glow */}
-          <div className="pointer-events-none absolute left-1/2 top-1/3 size-[520px] -translate-x-1/2 rounded-full bg-orange-200/50 blur-3xl" />
+          <div className="pointer-events-none absolute left-1/2 top-1/3 size-130 -translate-x-1/2 rounded-full bg-orange-200/50 blur-3xl" />
           <div className="relative mx-auto max-w-6xl">
             <h1 className="max-w-3xl text-5xl font-bold leading-tight tracking-tight text-ink md:text-6xl">
               Building experiences that move ideas forward.
@@ -41,13 +41,14 @@ export default function App() {
             className="min-h-screen scroll-mt-8 px-6 py-4"
           >
             <div className="mx-auto max-w-6xl">
-              <h2 className="text-4xl font-bold text-ink">
-                  {section.title}
-                </h2>
-              {section.id === 'process' ? (
+              <h2 className="text-4xl font-bold text-ink">{section.title}</h2>
+              {section.id === 'services' ? (
+                <Services />
+              ) : section.id === 'process' ? (
                 <Process />
               ) : (
-                <p></p>
+                <>
+                </>
               )}
             </div>
           </section>

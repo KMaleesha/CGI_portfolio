@@ -6,8 +6,8 @@ import {
   CheckCircle2,
   Rocket,
   Headphones,
-  ArrowRight,
 } from "lucide-react";
+import CTA from "./CTA";
 
 const processSteps = [
   {
@@ -123,32 +123,7 @@ export default function HowWeWork() {
           </div>
         </div>
 
-        <div className="mt-20 overflow-hidden rounded-3xl bg-gray-900 px-8 py-10 sm:px-12 sm:py-12">
-          <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-            <div className="max-w-2xl">
-              <p className="text-sm font-medium uppercase tracking-[0.18em] text-gray-400">
-                Have an idea?
-              </p>
-
-              <h3 className="mt-2 text-2xl font-semibold text-white sm:text-3xl">
-                Let&apos;s turn your idea into something people love.
-              </h3>
-
-              <p className="mt-3 text-gray-400">
-                Tell us about your project and let's start the
-                conversation.
-              </p>
-            </div>
-
-            <a href="#contact" className="group flex shrink-0 items-center gap-3 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-gray-900 transition-all duration-300 hover:bg-gray-100 hover:px-7">
-              Start a Conversation
-              <ArrowRight
-                size={18}
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </a>
-          </div>
-        </div>
+       <CTA />
       </div>
     </section>
   );
