@@ -1,15 +1,16 @@
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Process from './components/Process'
-import Services from './components/services'
+import Services from './components/Services'
+import About from './components/About'
 
 const sections = [
-  { id: 'services', title: 'Services' },
-  { id: 'process', title: 'How we work' },
-  { id: 'work', title: 'Work' },
-  { id: 'about', title: 'About Us' },
-  { id: 'blogs', title: 'Blogs' },
-  { id: 'contact', title: "Let's Talk" },
+  {id: 'about', title: 'About Us'},
+  {id: 'services', title: 'Services'},
+  {id: 'process', title: 'How we work'},
+  {id: 'work', title: 'Work'},
+  {id: 'blogs', title: 'Blogs'},
+  {id: 'contact', title: "Let's Talk"},
 ]
 
 export default function App() {
@@ -17,7 +18,7 @@ export default function App() {
     <>
       <Navbar />
 
-      <main>
+      <main className="bg-[#f5f4f0]">
         <section
           id="home"
           className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20"
@@ -28,7 +29,8 @@ export default function App() {
               Building experiences that move ideas forward.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-slate-500">
-              Full-stack engineer crafting clean, fast, and thoughtful web products.
+              Full-stack engineer crafting clean, fast, and thoughtful web
+              products.
             </p>
           </div>
         </section>
@@ -38,18 +40,18 @@ export default function App() {
           <section
             key={section.id}
             id={section.id}
-            className="min-h-screen scroll-mt-8 px-6 py-4"
+            className="min-h-screen px-6 "
           >
-            <div className="mx-auto max-w-6xl">
-              <h2 className="text-4xl font-bold text-ink">{section.title}</h2>
-              {section.id === 'services' ? (
+            <div className="mx-auto max-w-6xl">    
+              {section.id === 'about' ? (
+                <About />
+              ) : section.id === 'services' ? (
                 <Services />
               ) : section.id === 'process' ? (
                 <Process />
-              ) : (
-                <>
-                </>
-              )}
+              ) : 
+              <h2 className="text-4xl font-bold text-ink">{section.title}</h2>
+              }
             </div>
           </section>
         ))}

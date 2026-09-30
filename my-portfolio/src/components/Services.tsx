@@ -59,7 +59,7 @@ const services: Service[] = [
 
 const Services = () => {
   return (
-    <section id="services" className="bg-white py-8">
+    <section id="services" className="bg-[#f5f4f0]">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="mb-20 grid gap-8 lg:grid-cols-2">

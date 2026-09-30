@@ -62,7 +62,7 @@ const processSteps = [
 
 export default function HowWeWork() {
   return (
-    <section className="relative overflow-hidden bg-white py-4 sm:py-8">
+    <section className="relative overflow-hidden bg-[#f5f4f0] py-4 sm:py-8">
       <div className="pointer-events-none absolute left-0 top-20 h-72 w-72 rounded-full bg-gray-100/70 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 right-0 h-96 w-96 rounded-full bg-gray-100/70 blur-3xl" />
 
