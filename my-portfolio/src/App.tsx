@@ -3,6 +3,7 @@ import Footer from './components/Footer'
 import Process from './components/Process'
 import Services from './components/Services'
 import About from './components/About'
+import Contact from './components/Contact'
 
 const sections = [
   {id: 'about', title: 'About Us'},
@@ -40,7 +41,7 @@ export default function App() {
           <section
             key={section.id}
             id={section.id}
-            className="min-h-screen px-6 "
+            className=" px-6 "
           >
             <div className="mx-auto max-w-6xl">    
               {section.id === 'about' ? (
@@ -49,6 +50,8 @@ export default function App() {
                 <Services />
               ) : section.id === 'process' ? (
                 <Process />
+              ) : section.id === 'contact' ? (
+                <Contact />
               ) : 
               <h2 className="text-4xl font-bold text-ink">{section.title}</h2>
               }

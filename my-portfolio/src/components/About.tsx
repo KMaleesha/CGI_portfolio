@@ -1,25 +1,4 @@
 const About = () => {
-  const values = [
-    {
-      number: '01',
-      title: 'Think clearly',
-      description:
-        'We understand the problem first, then find the right technology to solve it.',
-    },
-    {
-      number: '02',
-      title: 'Build thoughtfully',
-      description:
-        'We care about every detail, from the first interaction to the final line of code.',
-    },
-    {
-      number: '03',
-      title: 'Grow together',
-      description:
-        'We build lasting partnerships and solutions that evolve with your business.',
-    },
-  ]
-
   return (
     <section
       id="about"
@@ -56,9 +35,9 @@ const About = () => {
           </div>
         </div>
 
-        {/* Large statement */}
-        <div>
-          <div className="border-y border-gray-300 py-12 md:py-16">
+
+        <div className="pt-8">
+          <div className="border-t border-gray-300 py-4 md:py-4">
             <p className="max-w-5xl text-3xl font-medium leading-tight tracking-[-0.03em] text-gray-800 md:text-5xl">
               We combine{' '}
               <span className="text-gray-400">technology, design</span> and{' '}
