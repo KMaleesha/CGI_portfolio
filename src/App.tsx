@@ -32,8 +32,7 @@ export default function App() {
               Building experiences that move ideas forward.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-slate-500">
-              Full-stack engineer crafting clean, fast, and thoughtful web
-              products.
+              Turning ideas into meaningful solutions that make a real difference.
             </p>
           </div>
         </section>
