@@ -99,7 +99,7 @@ const technologies = [
 const Services = () => {
   return (
     <section id="services" className="bg-[#f5f4f0]">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div>
         {/* Header */}
         <div className="mb-14 grid gap-8 lg:grid-cols-2 lg:items-end">
           <div>
@@ -158,7 +158,7 @@ const Services = () => {
               </div>
 
               {/* Tags */}
-              <div className="relative z-10 mt-auto flex flex-wrap gap-2 pt-6">
+              <div className="relative z-10 mt-auto flex flex-wrap gap-2 pt-2">
                 {service.tags.map((tag) => (
                   <span
                     key={tag}

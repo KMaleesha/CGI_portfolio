@@ -6,7 +6,7 @@ const About = () => {
     >
       <div className="pointer-events-none absolute -right-32 size-72 rounded-full bg-orange-200/50 opacity-40 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
+      <div className="relative">
         <div className="flex items-center gap-3">
           <span className="mb-8 size-2 rounded-full bg-orange-400" />
 

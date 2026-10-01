@@ -31,9 +31,9 @@ export default function App() {
           <section
             key={section.id}
             id={section.id}
-            className=" px-6 "
+            className=""
           >
-            <div className="mx-auto max-w-6xl">    
+            <div className="mx-auto max-w-[1320px] px-4 md:px-7">
               {section.id === 'about' ? (
                 <About />
               ) : section.id === 'services' ? (

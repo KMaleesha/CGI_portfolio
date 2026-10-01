@@ -66,7 +66,7 @@ export default function HowWeWork() {
       <div className="pointer-events-none absolute left-0 top-20 h-72 w-72 rounded-full bg-gray-100/70 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 right-0 h-96 w-96 rounded-full bg-gray-100/70 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+      <div className="relative">
         <div className="mx-auto max-w-3xl text-center">
 
           <h2 className="text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
