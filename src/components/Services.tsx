@@ -57,16 +57,43 @@ const services: Service[] = [
 
 const technologies = [
   'React',
+  'Angular',
   'Next.js',
   'Node.js',
   'NestJS',
+  'TypeScript',
+  'JavaScript',
   'Java',
-  'Flutter',
+  'Spring Boot',
+  'Python',
+  'WordPress',
+  'PostgreSQL',
+  'MongoDB',
+  'MySQL',
   'REST APIs',
-  'Docker',
+  'Flutter',
+  'iOS',
+  'Android',
   'AWS',
+  'Microsoft Azure',
+  'Docker',
+  'GitHub Actions',
+  'OpenAI',
+  'Gemini',
   'n8n',
-  'Git / GitHub',
+  'AI Integrations',
+  'Workflow Automation',
+  'Figma',
+  'Adobe XD',
+  'Wireframing',
+  'Prototyping',
+  'Design Systems',
+  'SEMrush',
+  'Screaming Frog',
+  'Google Analytics',
+  'Google Search Console',
+  'Google Ads',
+  'Social Media Marketing',
 ]
 
 const Services = () => {
@@ -97,19 +124,16 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Services Grid */}
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {services.map((service, index) => (
             <a
               key={service.title}
               href="#contact"
               aria-label={`Discuss ${service.title}`}
-              className="group relative flex min-h-[23rem] flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-[0_24px_60px_-24px_rgba(124,45,18,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-4 md:p-7"
+              className="group relative flex min-h-92 flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-[0_24px_60px_-24px_rgba(124,45,18,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-4 md:p-7"
             >
-              {/* Decorative circle */}
               <div className="pointer-events-none absolute -right-14 -top-14 size-40 rounded-full bg-linear-to-br from-orange-100 to-amber-50 transition-transform duration-500 group-hover:scale-125" />
 
-              {/* Top */}
               <div className="relative z-10 flex items-center">
                 <div className="flex items-center gap-3">
                   <span className="flex size-10 items-center justify-center rounded-2xl bg-orange-100 text-sm font-bold text-orange-700 transition-colors group-hover:bg-orange-500 group-hover:text-white">
@@ -159,41 +183,37 @@ const Services = () => {
             </a>
           ))}
         </div>
-
         {/* Technologies */}
-        <div className="mt-20 border-t border-gray-300 pt-10 pb-16">
-          <div className="grid gap-8 md:grid-cols-[0.7fr_1.3fr] md:items-start">
-            <div>
-              <div className="flex items-center gap-3">
-                <span className="size-2 rounded-full bg-orange-400" />
+        <div className="mt-20 pb-4">
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-3">
+              <span className="size-2 rounded-full bg-orange-400" />
 
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
-                  Technologies
-                </p>
-              </div>
-
-              <h3 className="mt-4 text-2xl font-semibold tracking-tight text-gray-900 md:text-3xl">
-                The tools behind our solutions.
-              </h3>
-            </div>
-
-            <div>
-              <p className="mb-6 max-w-xl text-sm leading-6 text-gray-500 md:text-base">
-                We choose the right technologies for each project, with a focus
-                on reliable, scalable, and maintainable solutions.
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
+                Technologies we use
               </p>
-
-              <div className="flex flex-wrap gap-3">
-                {technologies.map((technology) => (
-                  <span
-                    key={technology}
-                    className="rounded-full border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:border-orange-300 hover:bg-orange-200/50 hover:text-gray-900"
-                  >
-                    {technology}
-                  </span>
-                ))}
-              </div>
             </div>
+
+            <h3 className="mx-auto mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-gray-900 md:text-4xl">
+              Tools that bring ideas to life.
+            </h3>
+
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-gray-500 md:text-base">
+              We work with modern technologies and adapt our approach to your
+              project, existing systems, and business goals.
+            </p>
+          </div>
+
+          {/* Technology Wall */}
+          <div className="mx-auto mt-10 flex max-w-5xl flex-wrap justify-center gap-3">
+            {technologies.map((technology) => (
+              <span
+                key={technology}
+                className="rounded-full border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-600 transition-all duration-200 hover:-translate-y-1 hover:border-orange-300 hover:bg-orange-50 hover:text-gray-900 hover:shadow-sm"
+              >
+                {technology}
+              </span>
+            ))}
           </div>
         </div>
       </div>
