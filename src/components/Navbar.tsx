@@ -36,9 +36,9 @@ export default function Navbar() {
   return (
     <header className={`site-header ${scrolled ? 'site-header--scrolled' : ''}`}>
       <div className="header-inner">
-        <a href="#home" className="brand-mark" aria-label="Maleesha, home" onClick={() => setOpen(false)}>
-          <span className="brand-monogram">M<span>.</span></span>
-          <span className="brand-copy"><strong>MALEESHA</strong><small>CREATIVE DEVELOPER</small></span>
+        <a href="#home" className="brand-mark" aria-label="Connect Group International, home" onClick={() => setOpen(false)}>
+          <span className="brand-monogram">CGI<span>®</span></span>
+          <span className="brand-copy"><strong>CONNECT GROUP</strong><small>INTERNATIONAL</small></span>
         </a>
 
         <nav className="desktop-nav" aria-label="Main navigation">
