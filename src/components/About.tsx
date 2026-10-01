@@ -18,7 +18,7 @@ const About = () => {
         {/* Main heading */}
         <div className="grid gap-8 md:grid-cols-[1fr_0.65fr] md:items-end">
           <div>
-            <h2 className="max-w-5xl text-xl font-semibold leading-[0.9] tracking-[-0.055em] text-gray-900 sm:text-2xl md:text-6xl">
+            <h2 className="max-w-5xl text-4xl font-semibold leading-[0.95] tracking-[-0.045em] text-gray-900 sm:text-5xl md:text-6xl">
               Technology with
               <br />
               <span className="text-gray-400">purpose.</span>

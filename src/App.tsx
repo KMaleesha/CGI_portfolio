@@ -33,7 +33,7 @@ export default function App() {
             id={section.id}
             className=""
           >
-            <div className="mx-auto max-w-[1320px] px-4 md:px-7">
+            <div className="mx-auto max-w-330 px-4 md:px-7">
               {section.id === 'about' ? (
                 <About />
               ) : section.id === 'services' ? (
