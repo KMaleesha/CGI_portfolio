@@ -4,5 +4,5 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/cgi-portfolio/',
+  base: process.env.GITHUB_ACTIONS ? '/CGI_portfolio/' : '/',
 })
