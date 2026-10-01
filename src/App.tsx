@@ -1,12 +1,17 @@
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Process from './components/Process'
+import Services from './components/Services'
+import About from './components/About'
+import Contact from './components/Contact'
 
 const sections = [
-  { id: 'services', title: 'Services' },
-  { id: 'work', title: 'Work' },
-  { id: 'about', title: 'About Us' },
-  { id: 'blogs', title: 'Blogs' },
-  { id: 'contact', title: "Let's Talk" },
+  {id: 'about', title: 'About Us'},
+  {id: 'services', title: 'Services'},
+  {id: 'process', title: 'How we work'},
+  {id: 'work', title: 'Work'},
+  {id: 'blogs', title: 'Blogs'},
+  {id: 'contact', title: "Let's Talk"},
 ]
 
 export default function App() {
@@ -14,32 +19,43 @@ export default function App() {
     <>
       <Navbar />
 
-      <main>
+      <main className="bg-[#f5f4f0]">
         <section
           id="home"
           className="relative flex min-h-screen items-center overflow-hidden px-6 pt-20"
         >
-          {/* soft orange glow */}
-          <div className="pointer-events-none absolute left-1/2 top-1/3 size-[520px] -translate-x-1/2 rounded-full bg-orange-200/50 blur-3xl" />
+          <div className="pointer-events-none absolute left-1/2 top-1/3 size-130 -translate-x-1/2 rounded-full bg-orange-200/50 blur-3xl" />
           <div className="relative mx-auto max-w-6xl">
             <h1 className="max-w-3xl text-5xl font-bold leading-tight tracking-tight text-ink md:text-6xl">
               Building experiences that move ideas forward.
             </h1>
             <p className="mt-6 max-w-xl text-lg text-slate-500">
-              Full-stack engineer crafting clean, fast, and thoughtful web products.
+              Full-stack engineer crafting clean, fast, and thoughtful web
+              products.
             </p>
           </div>
         </section>
 
-        {sections.map((s) => (
+        {/* OTHER SECTIONS */}
+        {sections.map((section) => (
           <section
-            key={s.id}
-            id={s.id}
-            className="flex min-h-screen scroll-mt-20 items-center px-6"
+            key={section.id}
+            id={section.id}
+            className=" px-6 "
           >
-            <h2 className="mx-auto w-full max-w-6xl text-4xl font-bold text-ink">
-              {s.title}
-            </h2>
+            <div className="mx-auto max-w-6xl">    
+              {section.id === 'about' ? (
+                <About />
+              ) : section.id === 'services' ? (
+                <Services />
+              ) : section.id === 'process' ? (
+                <Process />
+              ) : section.id === 'contact' ? (
+                <Contact />
+              ) : 
+              <h2 className="text-4xl font-bold text-ink">{section.title}</h2>
+              }
+            </div>
           </section>
         ))}
       </main>
