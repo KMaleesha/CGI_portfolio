@@ -8,9 +8,9 @@ const About = () => {
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex items-center gap-3">
-          <span className="size-2 rounded-full bg-orange-400 mb-8" />
+          <span className="mb-8 size-2 rounded-full bg-orange-400" />
 
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500 mb-8">
+          <p className="mb-8 text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
             About us
           </p>
         </div>
@@ -29,12 +29,12 @@ const About = () => {
             <div className="mb-6 h-px w-20 bg-orange-400" />
 
             <p className="text-base leading-7 text-gray-500 md:text-lg">
-              We are a UK-based technology company creating digital products
-              and solutions that help ambitious businesses move forward.
+              We are a UK-based technology company with a team bringing
+              together more than 20 years of experience across technology,
+              design, and digital solutions.
             </p>
           </div>
         </div>
-
 
         <div className="pt-8">
           <div className="border-t border-gray-300 py-4 md:py-4">
@@ -42,11 +42,13 @@ const About = () => {
               We combine{' '}
               <span className="text-gray-400">technology, design</span> and{' '}
               <span className="text-orange-500">strategy</span> to create
-              digital experiences that make a difference.
+              digital solutions that make a difference.
             </p>
-            <p className="max-w-full text-sm leading-6 text-gray-500">
-              Working with ambitious businesses to create meaningful digital
-              experiences and scalable technology.
+
+            <p className="mt-4 max-w-full text-sm leading-6 text-gray-500">
+              Our team works closely with businesses to understand their goals,
+              solve real challenges, and build reliable solutions that grow
+              with them.
             </p>
           </div>
         </div>
