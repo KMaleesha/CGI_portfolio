@@ -6,6 +6,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import WhyWorkWithUs from './components/WhyWorkWithUs'
 import Home from './components/Home'
+import BlogPosts from './components/BlogPosts'
 
 const sections = [
   {id: 'about', title: 'About Us'},
@@ -41,6 +42,8 @@ export default function App() {
                 <Process />
               ) : section.id === 'why-us' ? (
                 <WhyWorkWithUs />
+              ) : section.id === 'blogs' ? (
+                <BlogPosts />
               ) : section.id === 'contact' ? (
                 <Contact />
               ) : 
