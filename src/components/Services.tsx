@@ -1,4 +1,3 @@
-
 interface Service {
   title: string
   description: string
@@ -56,6 +55,20 @@ const services: Service[] = [
   },
 ]
 
+const technologies = [
+  'React',
+  'Next.js',
+  'Node.js',
+  'NestJS',
+  'Java',
+  'Flutter',
+  'REST APIs',
+  'Docker',
+  'AWS',
+  'n8n',
+  'Git / GitHub',
+]
+
 const Services = () => {
   return (
     <section id="services" className="bg-[#f5f4f0]">
@@ -64,11 +77,13 @@ const Services = () => {
         <div className="mb-14 grid gap-8 lg:grid-cols-2 lg:items-end">
           <div>
             <div className="flex items-center gap-3">
-              <span className="size-2 rounded-full bg-orange-400 mb-8" />
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500 mb-8">
+              <span className="mb-8 size-2 rounded-full bg-orange-400" />
+
+              <p className="mb-8 text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
                 What we do
               </p>
             </div>
+
             <h2 className="max-w-xl text-4xl font-semibold tracking-tight text-gray-950 md:text-6xl">
               Digital solutions built around your business.
             </h2>
@@ -83,59 +98,103 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {services.map((service, index) => (
             <a
               key={service.title}
               href="#contact"
               aria-label={`Discuss ${service.title}`}
-              className="group relative flex min-h-92 flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-[0_24px_60px_-24px_rgba(124,45,18,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-4 md:p-9"
+              className="group relative flex min-h-[23rem] flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-orange-300 hover:shadow-[0_24px_60px_-24px_rgba(124,45,18,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-4 md:p-7"
             >
-              <div className="pointer-events-none absolute -right-16 -top-16 size-48 rounded-full bg-linear-to-br from-orange-100 to-amber-50 transition-transform duration-500 group-hover:scale-125" />
+              {/* Decorative circle */}
+              <div className="pointer-events-none absolute -right-14 -top-14 size-40 rounded-full bg-linear-to-br from-orange-100 to-amber-50 transition-transform duration-500 group-hover:scale-125" />
 
-              <div className="relative z-10 flex items-center justify-between">
+              {/* Top */}
+              <div className="relative z-10 flex items-center">
                 <div className="flex items-center gap-3">
-                  <span className="flex size-11 items-center justify-center rounded-2xl bg-orange-100 text-sm font-bold text-orange-700 transition-colors group-hover:bg-orange-500 group-hover:text-white">
+                  <span className="flex size-10 items-center justify-center rounded-2xl bg-orange-100 text-sm font-bold text-orange-700 transition-colors group-hover:bg-orange-500 group-hover:text-white">
                     {String(index + 1).padStart(2, '0')}
                   </span>
+
                   <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
                     Service
                   </span>
                 </div>
-
-                <span className="flex size-11 items-center justify-center rounded-full bg-gray-950 text-lg text-white transition-all duration-300 group-hover:rotate-45 group-hover:bg-orange-500">
-                  <span aria-hidden="true">↗</span>
-                </span>
               </div>
 
-              <div className="relative z-10 mt-12">
-                <h3 className="max-w-md text-2xl font-semibold tracking-tight text-gray-950 transition-colors group-hover:text-orange-700 md:text-3xl">
+              {/* Content */}
+              <div className="relative z-10 mt-8">
+                <h3 className="text-xl font-semibold tracking-tight text-gray-950 transition-colors group-hover:text-orange-700">
                   {service.title}
                 </h3>
-                <p className="mt-4 max-w-lg text-base leading-relaxed text-gray-600">
+
+                <p className="mt-3 text-sm leading-6 text-gray-600">
                   {service.description}
                 </p>
               </div>
 
-              <div className="relative z-10 mt-auto flex flex-wrap gap-2 pt-8">
+              {/* Tags */}
+              <div className="relative z-10 mt-auto flex flex-wrap gap-2 pt-6">
                 {service.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 text-xs font-medium text-gray-500"
+                    className="rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1 text-[11px] font-medium text-gray-500"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
 
-              <div className="relative z-10 mt-7 flex items-center justify-between border-t border-gray-100 pt-5 text-sm font-semibold text-gray-700">
+              {/* CTA */}
+              <div className="relative z-10 mt-5 flex items-center justify-between border-t border-gray-100 pt-4 text-xs font-semibold text-gray-700">
                 <span>Let&apos;s talk about this</span>
-                <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
+
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                >
                   →
                 </span>
               </div>
             </a>
           ))}
+        </div>
+
+        {/* Technologies */}
+        <div className="mt-20 border-t border-gray-300 pt-10 pb-16">
+          <div className="grid gap-8 md:grid-cols-[0.7fr_1.3fr] md:items-start">
+            <div>
+              <div className="flex items-center gap-3">
+                <span className="size-2 rounded-full bg-orange-400" />
+
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gray-500">
+                  Technologies
+                </p>
+              </div>
+
+              <h3 className="mt-4 text-2xl font-semibold tracking-tight text-gray-900 md:text-3xl">
+                The tools behind our solutions.
+              </h3>
+            </div>
+
+            <div>
+              <p className="mb-6 max-w-xl text-sm leading-6 text-gray-500 md:text-base">
+                We choose the right technologies for each project, with a focus
+                on reliable, scalable, and maintainable solutions.
+              </p>
+
+              <div className="flex flex-wrap gap-3">
+                {technologies.map((technology) => (
+                  <span
+                    key={technology}
+                    className="rounded-full border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-600 transition-colors hover:border-orange-300 hover:bg-orange-200/50 hover:text-gray-900"
+                  >
+                    {technology}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

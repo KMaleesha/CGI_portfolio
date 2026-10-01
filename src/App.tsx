@@ -4,11 +4,13 @@ import Process from './components/Process'
 import Services from './components/Services'
 import About from './components/About'
 import Contact from './components/Contact'
+import WhyWorkWithUs from './components/WhyWorkWithUs'
 
 const sections = [
   {id: 'about', title: 'About Us'},
   {id: 'services', title: 'Services'},
   {id: 'process', title: 'How we work'},
+  {id: 'why-us', title: 'Why Work with Us'},
   {id: 'work', title: 'Work'},
   {id: 'blogs', title: 'Blogs'},
   {id: 'contact', title: "Let's Talk"},
@@ -50,6 +52,8 @@ export default function App() {
                 <Services />
               ) : section.id === 'process' ? (
                 <Process />
+              ) : section.id === 'why-us' ? (
+                <WhyWorkWithUs />
               ) : section.id === 'contact' ? (
                 <Contact />
               ) : 
